@@ -10,7 +10,7 @@
 
     <div class="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
         <video autoplay muted loop playsinline class="absolute min-w-full min-h-full object-cover opacity-40">
-            <source src="{{ asset('nfs_bg.mp4') }}" type="video/mp4">
+            <source src="{{ asset('nfs_bg.mp4.mp4') }}" type="video/mp4">
             <source src="https://exit-strategy.com/wp-content/uploads/2021/05/NFS_Heat_Background.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/80 to-slate-950"></div>
