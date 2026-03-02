@@ -6,7 +6,18 @@
     <title>Hermgild | Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body <div class="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
+    <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        class="absolute min-w-full min-h-full object-cover opacity-40">
+        <source src="https://cdn.pixabay.com/video/2020/09/16/50123-461320349_tiny.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/50 to-slate-950"></div>
+</div>
 
     <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
         <div class="text-2xl font-bold tracking-tighter text-blue-400">Welcome utod!</div>
@@ -65,10 +76,43 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section><section class="max-w-6xl mx-auto px-4 py-20 bg-gray-900">
+    <h2 class="text-3xl font-bold mb-12 text-center text-white">My <span class="text-blue-500">Tech Stack</span></h2>
+    
+    <div class="flex flex-wrap justify-center gap-8">
+        <div class="flex flex-col items-center group">
+            <div class="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 group-hover:border-blue-500 transition">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" class="w-10 h-10" alt="PHP">
+            </div>
+            <span class="mt-2 text-sm text-gray-400">PHP</span>
+        </div>
+
+        <div class="flex flex-col items-center group">
+            <div class="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 group-hover:border-red-500 transition">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg" class="w-10 h-10" alt="Laravel">
+            </div>
+            <span class="mt-2 text-sm text-gray-400">Laravel</span>
+        </div>
+
+        <div class="flex flex-col items-center group">
+            <div class="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 group-hover:border-teal-400 transition">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" class="w-10 h-10" alt="Tailwind">
+            </div>
+            <span class="mt-2 text-sm text-gray-400">Tailwind</span>
+        </div>
+
+        <div class="flex flex-col items-center group">
+            <div class="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 group-hover:border-blue-400 transition">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" class="w-10 h-10" alt="MySQL">
+            </div>
+            <span class="mt-2 text-sm text-gray-400">MySQL</span>
+        </div>
+    </div>
+</section>
     <footer class="border-t border-gray-800 p-8 text-center text-gray-500 text-sm">
-        © 2026 Hermgild. Built with Laravel & Deployed on Railway.
+        © 2026 — Built for practice, deployed for experience.
     </footer>
 
 </body>
 </html>
+
