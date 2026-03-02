@@ -9,8 +9,9 @@
 <body class="bg-slate-950 text-white font-sans overflow-x-hidden">
 
     <div class="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
-        <video autoplay muted loop playsinline class="absolute min-w-full min-h-full object-cover opacity-30">
-            <source src="https://v.ftcdn.net/02/90/19/33/700_F_290193356_YOnR69O0mX443qgW0W7P78D235FvS75F_ST.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline class="absolute min-w-full min-h-full object-cover opacity-40">
+            <source src="https://github.com/Hermgild/assets/raw/main/nfs_bg.mp4" type="video/mp4" onerror="this.parentElement.innerHTML='<source src=\'https://v.ftcdn.net/02/90/19/33/700_F_290193356_YOnR69O0mX443qgW0W7P78D235FvS75F_ST.mp4\' type=\'video/mp4\'>'">
+            <source src="https://exit-strategy.com/wp-content/uploads/2021/05/NFS_Heat_Background.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/80 to-slate-950"></div>
     </div>
@@ -20,7 +21,7 @@
         <div class="flex items-center space-x-6">
             <a href="#projects" class="hover:text-blue-600 transition hidden md:block">Projects</a>
             
-            <a href="https://www.facebook.com/ha.ngin.3990" target="_blank" class="text-gray-400 hover:text-blue-500 transition">
+            <a href="c" target="_blank" class="text-gray-400 hover:text-blue-500 transition">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
 
@@ -114,12 +115,12 @@
         <h2 class="text-3xl font-bold mb-8">Let's <span class="text-blue-500">Connect</span></h2>
         
         <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-            <a href="https://www.facebook.com/ha.ngin.3990" target="_blank" class="flex items-center space-x-3 bg-blue-600 px-8 py-3 rounded-xl hover:bg-blue-700 transition w-full md:w-auto justify-center">
+            <a href="https://www.facebook.com/Slimshady477" target="_blank" class="flex items-center space-x-3 bg-blue-600 px-8 py-3 rounded-xl hover:bg-blue-700 transition w-full md:w-auto justify-center">
                 <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 <span class="font-bold">Facebook</span>
             </a>
 
-            <a href="mailto:your-email@example.com" class="flex items-center space-x-3 bg-white text-black px-8 py-3 rounded-xl hover:bg-gray-200 transition w-full md:w-auto justify-center">
+            <a href="mailto:your-email@example.com" class="flex items-center space-x-3 bg-white text-black px-8 py-3 rounded-xl hover:bg-gray-200 transition w-full md:w-auto justify-center border border-gray-300">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                 <span class="font-bold">Email Me</span>
             </a>
