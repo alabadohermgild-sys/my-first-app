@@ -2,19 +2,20 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hermz | Nightmaric Spawn</title>
 
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-white font-sans overflow-x-hidden">
 
     <div class="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
     <video autoplay muted loop playsinline class="absolute min-w-full min-h-full object-cover">
-        <source src="{{ asset('NFSS.mp4') }}" type="video/mp4">
+   <source src="/NFSS.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-[2px]"></div>
 </div>
