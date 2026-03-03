@@ -26,7 +26,12 @@
 
     <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/5 border-b border-white/10 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter text-blue-500">HERMZ</div>
+            <div class="flex items-center space-x-4">
+                <div class="text-2xl font-black tracking-tighter text-blue-500">HERMZ</div>
+                <span class="hidden md:block text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] border-l border-white/10 pl-4">
+                    Dashboard / <span class="text-blue-400">Welcome</span>
+                </span>
+            </div>
             
             <div class="flex items-center space-x-6">
                 <a href="#about-window" class="text-sm font-medium hover:text-blue-400 transition">About</a>
@@ -39,6 +44,14 @@
     </nav>
 
     <main class="flex flex-col items-center justify-center min-h-screen text-center px-4 relative z-10">
+        <div class="mb-6 flex items-center space-x-2 bg-white/5 backdrop-blur-xl border border-white/10 px-4 py-1.5 rounded-full shadow-2xl">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-blue-100">Welcome back, User</span>
+        </div>
+
         <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tight">
             Hello, I'm <span class="text-blue-500">Gild</span>
         </h1>
