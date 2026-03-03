@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hermgild | Developer Portfolio</title>
+    <title>Hermz | Nightmaric Spawn</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-white font-sans overflow-x-hidden">
 
     <div class="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
-        <video autoplay muted loop playsinline class="absolute min-w-full min-h-full object-cover opacity-40">
-            <source src="{{ asset('NFSS.mp4') }}" type="video/mp4">
-            
+    <video autoplay muted loop playsinline class="absolute min-w-full min-h-full object-cover">
+        <source src="{{ asset('NFSS.mp4') }}" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-[2px]"></div>
+</div>
         </video>
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/80 to-slate-950"></div>
     </div>
@@ -59,7 +61,7 @@
                 </div>
             </div>
 
-            <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl opacity-60 hover:opacity-100 transition">
+            <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:border-blue-500 transition group">
                 <div class="text-blue-400 text-sm font-mono mb-2">02. Database</div>
                 <h3 class="text-xl font-bold mb-3">Task Manager (Soon)</h3>
                 <p class="text-gray-400 text-sm mb-4">A CRUD application that allows users to manage tasks using a MySQL database.</p>
@@ -69,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl opacity-60 hover:opacity-100 transition">
+            <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:border-blue-500 transition group">
                 <div class="text-blue-400 text-sm font-mono mb-2">03. API</div>
                 <h3 class="text-xl font-bold mb-3">Weather Dashboard</h3>
                 <p class="text-gray-400 text-sm mb-4">Integrating a 3rd-party API to fetch real-time weather data for any city.</p>
