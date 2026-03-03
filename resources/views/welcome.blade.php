@@ -2,8 +2,12 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hermz | Nightmaric Spawn</title>
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-white font-sans overflow-x-hidden">
