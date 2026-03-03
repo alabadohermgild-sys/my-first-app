@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+    <head>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="UTF-8">
@@ -12,6 +17,60 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-white font-sans overflow-x-hidden">
+
+<div id="about-" class="fixed inset-0 z-[100] hidden target:flex items-center justify-center bg-black/60 backdrop-blur-md px-4">
+    
+    <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden transform transition-all">
+        
+        <div class="flex justify-between items-center p-6 border-b border-gray-100">
+            <h3 class="text-2xl font-bold text-gray-800">About Me</h3>
+            <a href="#" class="text-gray-400 hover:text-black text-3xl">&times;</a>
+        </div>
+
+        <div class="p-8">
+            <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                Hi, I'm <span class="text-blue-600 font-bold text-xl underline decoration-blue-200">Hermz</span>. 
+                I specialize in creating clean, fast, and secure web applications. 
+                Currently, I'm mastering the Laravel ecosystem to build powerful digital products.
+            </p>
+            
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3 text-gray-700">
+                    <span class="bg-blue-100 p-2 rounded-lg">💻</span>
+                    <span class="font-medium">Laravel & PHP Enthusiast</span>
+                </div>
+                <div class="flex items-center space-x-3 text-gray-700">
+                    <span class="bg-blue-100 p-2 rounded-lg">🎨</span>
+                    <span class="font-medium">Tailwind CSS & UI Design</span>
+                </div>
+                <div class="flex items-center space-x-3 text-gray-700">
+                    <span class="bg-blue-100 p-2 rounded-lg">🛡️</span>
+                    <span class="font-medium">Security-First Development</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-6 bg-gray-50 flex justify-end">
+            <a href="#" class="px-6 py-2 bg-gray-800 text-white rounded-xl font-medium hover:bg-black transition">
+                Close
+            </a>
+        </div>
+    </div>
+</div>
+
+<body class="antialiased bg-black">
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/10 border-b border-white/10 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-white">
+            <h1 class="font-bold text-xl uppercase tracking-widest">Hermz</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+ <div id="about-window" class="fixed inset-0 z-[100] hidden target:flex items-center justify-center bg-black/60 backdrop-blur-md px-4" style="display: none;">
 
     <div class="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
     <video autoplay muted loop playsinline class="absolute min-w-full min-h-full object-cover">
