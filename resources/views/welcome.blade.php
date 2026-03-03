@@ -10,14 +10,14 @@
 
     <div class="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
         <video autoplay muted loop playsinline class="absolute min-w-full min-h-full object-cover opacity-40">
-            <source src="{{ asset('nfs_bg.mp4') }}" type="video/mp4">
+            <source src="{{ asset('NFSS.mp4') }}" type="video/mp4">
             
         </video>
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/80 to-slate-950"></div>
     </div>
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto relative z-10">
-        <div class="text-5xl font-bold tracking-tighter text-blue-600">Welcome utod!</div>
+    <nav class="p-6 flex justify-between items-center max-w-8xl mx-auto relative z-10">
+        <div class="text-4xl font-bold tracking-tighter text-blue-600">Welcome utod!</div>
         <div class="flex items-center space-x-6">
             <a href="#projects" class="hover:text-blue-600 transition hidden md:block">Projects</a>
             
