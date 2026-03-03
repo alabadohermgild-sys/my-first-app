@@ -47,7 +47,7 @@
         </p>
         <div class="flex space-x-4">
             <a href="/weather" class="border border-blue-500 bg-blue-500/10 px-8 py-3 rounded-full hover:bg-blue-500 hover:text-white transition uppercase font-bold tracking-widest text-xs">
-                View My Live Work
+                View Global Weather
             </a>
             <a href="#projects" class="border border-gray-500 px-8 py-3 rounded-full hover:bg-white hover:text-black transition uppercase font-bold tracking-widest text-xs">
                 Browse Projects
@@ -78,10 +78,15 @@
             </div>
 
             <a href="/weather" class="block group">
-                <div class="bg-slate-900/50 backdrop-blur-md border border-slate-800 p-6 rounded-2xl border-blue-500/50 hover:border-blue-500 transition h-full">
+                <div class="bg-slate-900/50 backdrop-blur-md border border-slate-800 p-6 rounded-2xl border-blue-500/50 hover:border-blue-500 transition h-full relative overflow-hidden">
+                    
+                    <div class="absolute top-0 right-0 mt-4 mr-4">
+                        <span class="bg-blue-600 text-[8px] font-black px-2 py-1 rounded-md shadow-lg shadow-blue-500/20 animate-pulse">LIVE</span>
+                    </div>
+
                     <div class="text-blue-400 text-sm font-mono mb-2">03. API</div>
                     <h3 class="text-xl font-bold mb-3 text-blue-400">Weather Dashboard</h3>
-                    <p class="text-gray-400 text-sm mb-4">Integrating a 3rd-party API to fetch real-time weather data for any city. (Click to open)</p>
+                    <p class="text-gray-400 text-sm mb-4">Integrating a 3rd-party API to fetch real-time weather data for any city around the world. (Click to open)</p>
                     <div class="flex space-x-3 text-[10px] font-bold text-blue-500/50">
                         <span>API</span> <span>JSON</span> <span>LIVE</span>
                     </div>
