@@ -40,7 +40,7 @@
 
     <main class="flex flex-col items-center justify-center min-h-screen text-center px-4 relative z-10">
         <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tight">
-            Hello, I'm <span class="text-blue-500">Hermgild</span>
+            Hello, I'm <span class="text-blue-500">Gild</span>
         </h1>
         <p class="text-xl text-gray-300 max-w-2xl mb-8">
             A learner in tech, a servant in faith.
