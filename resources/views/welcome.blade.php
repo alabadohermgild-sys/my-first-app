@@ -154,8 +154,11 @@
                     </a>
                 </div>
                 <div>
-                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-4">Leave a Message</p>
-                    <textarea id="comment-input" class="w-full p-4 bg-white/5 border border-white/10 rounded-2xl text-sm focus:outline-none focus:border-blue-500 mb-3 h-28" placeholder="Type here..."></textarea>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Display Name</p>
+                    <input id="nickname-input" type="text" class="w-full p-3 bg-white/5 border border-white/10 rounded-xl text-sm focus:outline-none focus:border-blue-500 text-white mb-4" placeholder="Enter nickname...">
+                    
+                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Leave a Message</p>
+                    <textarea id="comment-input" class="w-full p-4 bg-white/5 border border-white/10 rounded-2xl text-sm focus:outline-none focus:border-blue-500 mb-3 h-28 text-white" placeholder="Type here..."></textarea>
                     <button onclick="postComment()" class="w-full py-4 bg-blue-600 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-blue-500 transition shadow-lg shadow-blue-500/20">Post Comment</button>
                 </div>
             </div>
@@ -165,14 +168,7 @@
                     <a href="#" class="hidden md:block text-3xl text-gray-500 hover:text-white">&times;</a>
                 </div>
                 <div id="comment-feed" class="space-y-4 max-h-[420px] overflow-y-auto pr-2 feed-scrollbar">
-                    <div class="flex space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-blue-500/20 border border-blue-500/50 flex items-center justify-center font-bold text-blue-400 text-xs shrink-0">JD</div>
-                        <div class="bg-white/5 p-4 rounded-2xl rounded-tl-none border border-white/5">
-                            <p class="text-[10px] font-black text-blue-400 uppercase mb-1">John Doe</p>
-                            <p class="text-sm text-gray-400 leading-tight">This UI looks absolutely fire. Love the "Nightmaric" vibe!</p>
-                        </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
@@ -227,11 +223,47 @@
         </div>
     </section>
 
-    <footer class="border-t border-white/5 p-8 text-center text-gray-500 text-xs relative z-10 bg-slate-950/50 uppercase tracking-widest">
+    <footer class="border-t border-white/5 p-5 text-center text-gray-500 text-[10px] relative z-10 bg-slate-950/50 uppercase tracking-widest">
         © 2026 Hermz — System Heartbeat: <span class="text-green-500 animate-pulse">Operational</span>
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+      
+    
     <script>
+        // FIREBASE CONFIGURATION
+        const firebaseConfig = {
+            apiKey: "AIzaSyAZeLdrBrAgPMgJw8gzlnoykBKYa1WwDp8",
+            authDomain: "portfolio-342e5.firebaseapp.com",
+            databaseURL: "https://portfolio-342e5-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "portfolio-342e5",
+            storageBucket: "portfolio-342e5.firebasestorage.app",
+            messagingSenderId: "151516295330",
+            appId: "1:151516295330:web:2cc072d63f9ec0969b27fb",
+            measurementId: "G-JBV3229YH2"
+
+            function deleteComment(id) {
+    // Simple admin check so random visitors can't delete your feed
+    const password = prompt("Enter Admin Password to delete:");
+    
+    if (password === "YOUR_SECRET_PASSWORD") { // Change this to your own secret
+        database.ref('comments/' + id).remove()
+            .then(() => alert("Comment removed."))
+            .catch((error) => alert("Security Error: " + error.message));
+    } else {
+        alert("Access Denied: Incorrect Password.");
+    }
+}
+        };
+
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        const commentsRef = database.ref('comments');
+
+        // CLOCK LOGIC (UNTOUCHED)
         function updateClock() {
             const now = new Date();
             const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
@@ -240,38 +272,63 @@
         setInterval(updateClock, 1000);
         updateClock(); 
 
+        // LATENCY LOGIC (UNTOUCHED)
         setInterval(() => {
             const base = 20;
             const random = Math.floor(Math.random() * 15);
             document.getElementById('latency').textContent = (base + random) + 'ms';
         }, 3000);
 
-        // LIVE COMMENT LOGIC
-        function postComment() {
-            const input = document.getElementById('comment-input');
+        // GLOBAL COMMENT LOGIC (NEW)
+        commentsRef.on('value', (snapshot) => {
             const feed = document.getElementById('comment-feed');
+            feed.innerHTML = ''; // Clear current local view
+            const data = snapshot.val();
             
-            if (input.value.trim() === "") {
+            if (data) {
+                // We show newest comments at the top
+                Object.keys(data).forEach((key) => {
+                    const c = data[key];
+                    const initial = c.name ? c.name.charAt(0).toUpperCase() : 'U';
+                    const div = document.createElement('div');
+                    div.className = "flex space-x-3 group animate-fade-in";
+                    div.innerHTML = `
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 border border-blue-500/50 flex items-center justify-center font-bold text-blue-400 text-xs shrink-0">${initial}</div>
+                        <div class="bg-white/5 p-4 rounded-2xl rounded-tl-none border border-white/5 w-full relative">
+                            <p class="text-[10px] font-black text-blue-400 uppercase mb-1">${c.name || 'Guest Visitor'}</p>
+                            <p class="text-sm text-gray-400 leading-tight">${c.text}</p>
+                            <button onclick="deleteComment('${key}')" class="absolute top-2 right-2 text-gray-600 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all text-[8px] font-bold">REMOVE</button>
+                        </div>
+                    `;
+                    feed.prepend(div);
+                });
+            }
+        });
+
+        function postComment() {
+            const nameInput = document.getElementById('nickname-input');
+            const msgInput = document.getElementById('comment-input');
+            
+            if (msgInput.value.trim() === "") {
                 alert("Please type a message first!");
                 return;
             }
 
-            // Create comment HTML
-            const newComment = document.createElement('div');
-            newComment.className = "flex space-x-3 animate-fade-in";
-            newComment.innerHTML = `
-                <div class="w-10 h-10 rounded-full bg-green-500/20 border border-green-500/50 flex items-center justify-center font-bold text-green-400 text-xs shrink-0">U</div>
-                <div class="bg-white/5 p-4 rounded-2xl rounded-tl-none border border-white/5 w-full">
-                    <p class="text-[10px] font-black text-green-400 uppercase mb-1">Guest User</p>
-                    <p class="text-sm text-gray-400 leading-tight">${input.value}</p>
-                </div>
-            `;
+            // Save to Firebase (This syncs it for everyone globally)
+            commentsRef.push({
+                name: nameInput.value.trim() || 'Anonymous',
+                text: msgInput.value.trim(),
+                timestamp: Date.now()
+            });
 
-            // Add to the top of the feed
-            feed.prepend(newComment);
-            
-            // Clear input
-            input.value = "";
+            // Clear inputs
+            msgInput.value = "";
+        }
+
+        function deleteComment(id) {
+            if(confirm("Delete this comment for everyone?")) {
+                database.ref('comments/' + id).remove();
+            }
         }
     </script>
 </body>
