@@ -229,8 +229,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
-      
-    
+
     <script>
         // FIREBASE CONFIGURATION
         const firebaseConfig = {
@@ -242,21 +241,7 @@
             messagingSenderId: "151516295330",
             appId: "1:151516295330:web:2cc072d63f9ec0969b27fb",
             measurementId: "G-JBV3229YH2"
-
-            function deleteComment(id) {
-    // Simple admin check so random visitors can't delete your feed
-    const password = prompt("Enter Admin Password to delete:");
-    
-    if (password === "YOUR_SECRET_PASSWORD") { // Change this to your own secret
-        database.ref('comments/' + id).remove()
-            .then(() => alert("Comment removed."))
-            .catch((error) => alert("Security Error: " + error.message));
-    } else {
-        alert("Access Denied: Incorrect Password.");
-    }
-}
         };
-
 
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
