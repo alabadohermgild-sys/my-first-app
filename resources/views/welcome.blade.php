@@ -28,6 +28,21 @@
             transform: translateY(-5px);
             box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
         }
+
+        @keyframes fillBar {
+            from { width: 0; }
+            to { width: var(--target-width); }
+        }
+        .progress-fill {
+            animation: fillBar 2s ease-out forwards;
+        }
+
+        /* Scriptural Fade Animation */
+        @keyframes quoteFade {
+            0%, 100% { opacity: 0.5; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(-2px); }
+        }
+        .divine-quote { animation: quoteFade 4s ease-in-out infinite; }
     </style>
 </head>
 <body class="bg-slate-950 text-white font-sans overflow-x-hidden">
@@ -71,21 +86,23 @@
         <p class="text-xl text-gray-300 max-w-2xl mb-8">A learner in tech, a servant in faith.</p>
         
         <div class="flex flex-wrap justify-center gap-4 mb-10">
-            <div class="bg-black/40 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-md min-w-[100px]">
-                <p class="text-[9px] text-gray-500 uppercase font-black tracking-tighter mb-1">Database</p>
-                <div class="flex items-center justify-center space-x-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_#22c55e]"></span>
-                    <span class="text-[10px] font-mono text-green-400">ONLINE</span>
-                </div>
-            </div>
-            <div class="bg-black/40 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-md min-w-[100px]">
-                <p class="text-[9px] text-gray-500 uppercase font-black tracking-tighter mb-1">PHP Engine</p>
+            <div class="bg-black/40 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-md min-w-[100px] order-1">
+                <p class="text-[9px] text-gray-500 uppercase font-black tracking-tighter mb-1">SCHOOL</p>
                 <div class="flex items-center justify-center space-x-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6] animate-pulse"></span>
-                    <span class="text-[10px] font-mono text-blue-400 uppercase">V8.2 Active</span>
+                    <span class="text-[10px] font-mono text-blue-400 uppercase">CENTRAL PHILIPPINE ADVENTIST COLLEGE</span>
                 </div>
             </div>
-            <div class="bg-black/40 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-md min-w-[100px]">
+
+            <div class="bg-black/40 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-md min-w-[100px] order-2">
+                <p class="text-[9px] text-gray-500 uppercase font-black tracking-tighter mb-1">Degree Program</p>
+                <div class="flex items-center justify-center space-x-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_#22c55e]"></span>
+                    <span class="text-[10px] font-mono text-green-400">BS INFORMATION SYSTEMS</span>
+                </div>
+            </div>
+
+            <div class="bg-black/40 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-md min-w-[100px] order-3">
                 <p class="text-[9px] text-gray-500 uppercase font-black tracking-tighter mb-1">Latency</p>
                 <div class="flex items-center justify-center space-x-2">
                     <span id="latency" class="text-[10px] font-mono text-yellow-500">24ms</span>
@@ -113,14 +130,17 @@
                 </div>
                 <p class="text-gray-300 leading-relaxed mb-6">
                     Hi! I'm <span class="text-blue-500 font-bold">Hermgild</span>. I'm a passionate learner in tech, currently exploring the Laravel ecosystem. This portfolio is my first major step in deploying live apps!
+                    <br><span class="text-xs italic text-blue-400 divine-quote">"Commit your work to the Lord, and your plans will be established." — Prov 16:3</span>
                 </p>
                 <div class="mb-8">
                     <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-3">Core Stack</p>
-                    <div class="flex space-x-4">
+                    <div class="flex space-x-4 flex-wrap gap-y-2">
                         <a href="https://www.php.net/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" class="w-8 h-8 hover:scale-110 transition" title="PHP"></a>
                         <a href="https://laravel.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg" class="w-8 h-8 hover:scale-110 transition" title="Laravel"></a>
                         <a href="https://tailwindcss.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" class="w-8 h-8 hover:scale-110 transition" title="Tailwind"></a>
                         <a href="https://www.mysql.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" class="w-8 h-8 hover:scale-110 transition" title="MySQL"></a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" class="w-8 h-8 hover:scale-110 transition" title="HTML5"></a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" class="w-8 h-8 hover:scale-110 transition" title="JavaScript"></a>
                     </div>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4">
@@ -220,6 +240,89 @@
                 </div>
                 <span class="mt-2 text-sm text-gray-400 group-hover:text-teal-400">Tailwind</span>
             </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="flex flex-col items-center group tech-card transition-all duration-300">
+                <div class="w-16 h-16 bg-gray-800/50 rounded-2xl flex items-center justify-center border border-gray-700 group-hover:border-orange-500 transition">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" class="w-10 h-10" alt="HTML">
+                </div>
+                <span class="mt-2 text-sm text-gray-400 group-hover:text-orange-500">HTML5</span>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="flex flex-col items-center group tech-card transition-all duration-300">
+                <div class="w-16 h-16 bg-gray-800/50 rounded-2xl flex items-center justify-center border border-gray-700 group-hover:border-yellow-400 transition">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
+                </div>
+                <span class="mt-2 text-sm text-gray-400 group-hover:text-yellow-400">JavaScript</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-20 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="glass-panel p-8 rounded-3xl border-white/10">
+                <h3 class="text-xl font-black tracking-tighter text-blue-500 mb-8 uppercase">Technical Proficiency</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Laravel / Backend</span>
+                            <span class="text-xs font-mono text-blue-400">10%</span>
+                        </div>
+                        <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden border border-white/5">
+                            <div class="progress-fill bg-blue-500 h-full rounded-full" style="--target-width: 10%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Tailwind / Frontend</span>
+                            <span class="text-xs font-mono text-teal-400">10%</span>
+                        </div>
+                        <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden border border-white/5">
+                            <div class="progress-fill bg-teal-500 h-full rounded-full" style="--target-width: 10%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-gray-400">HTML / JavaScript</span>
+                            <span class="text-xs font-mono text-orange-400">10%</span>
+                        </div>
+                        <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden border border-white/5">
+                            <div class="progress-fill bg-orange-500 h-full rounded-full" style="--target-width: 10%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Faith / Prayer (Hard Carrying My Code)</span>
+                            <span class="text-xs font-mono text-purple-400">80%</span>
+                        </div>
+                        <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden border border-white/5">
+                            <div class="progress-fill bg-gradient-to-r from-purple-500 to-pink-500 h-full rounded-full" style="--target-width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="flex flex-col justify-center">
+    <p class="text-[10px] font-black text-blue-500 uppercase tracking-[0.4em] mb-4">Divine Guidance</p>
+    <h3 class="text-4xl font-black mb-6 tracking-tight">Need my <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Credentials?</span></h3>
+    
+    <p class="text-orange-500/90 leading-relaxed mb-4 text-[12px] italic">
+        "I can do all things through Christ who strengthens me." — Philippians 4:13
+    </p>
+    
+    <p class="text-gray-300 leading-relaxed mb-8 text-sm border-l-2 border-blue-500 pl-5">
+        I'm building my career on a rock-solid foundation. 
+        <span class="text-blue-500">Warning:</span> My current stack is 10% skills and 80% faith. Hire me before I accidentally delete my production database again!
+    </p>
+    
+    <div class="flex flex-wrap gap-4">
+        <a href="/path-to-your-cv.pdf" download class="group flex items-center bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-95">
+            <svg class="w-5 h-5 mr-3 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span class="text-xs font-black uppercase tracking-widest">Download CV</span>
+        </a>
+        <a href="https://github.com" target="_blank" class="flex items-center bg-white/5 border border-white/10 hover:bg-white/10 text-white px-6 py-4 rounded-2xl transition-all">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" class="w-5 h-5 mr-3 invert opacity-70" alt="GitHub">
+            <span class="text-xs font-black uppercase tracking-widest">GitHub Repos</span>
+        </a>
+    </div>
+</div>
         </div>
     </section>
 
@@ -231,7 +334,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 
     <script>
-        // FIREBASE CONFIGURATION
         const firebaseConfig = {
             apiKey: "AIzaSyAZeLdrBrAgPMgJw8gzlnoykBKYa1WwDp8",
             authDomain: "portfolio-342e5.firebaseapp.com",
@@ -243,35 +345,33 @@
             measurementId: "G-JBV3229YH2"
         };
 
-        // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
         const commentsRef = database.ref('comments');
 
-        // CLOCK LOGIC (UNTOUCHED)
         function updateClock() {
             const now = new Date();
             const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-            document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', options);
+            const clockEl = document.getElementById('clock');
+            if(clockEl) clockEl.textContent = now.toLocaleTimeString('en-US', options);
         }
         setInterval(updateClock, 1000);
         updateClock(); 
 
-        // LATENCY LOGIC (UNTOUCHED)
         setInterval(() => {
             const base = 20;
             const random = Math.floor(Math.random() * 15);
-            document.getElementById('latency').textContent = (base + random) + 'ms';
+            const latEl = document.getElementById('latency');
+            if(latEl) latEl.textContent = (base + random) + 'ms';
         }, 3000);
 
-        // GLOBAL COMMENT LOGIC (NEW)
         commentsRef.on('value', (snapshot) => {
             const feed = document.getElementById('comment-feed');
-            feed.innerHTML = ''; // Clear current local view
+            if(!feed) return;
+            feed.innerHTML = ''; 
             const data = snapshot.val();
             
             if (data) {
-                // We show newest comments at the top
                 Object.keys(data).forEach((key) => {
                     const c = data[key];
                     const initial = c.name ? c.name.charAt(0).toUpperCase() : 'U';
@@ -293,26 +393,23 @@
         function postComment() {
             const nameInput = document.getElementById('nickname-input');
             const msgInput = document.getElementById('comment-input');
-            
-            if (msgInput.value.trim() === "") {
-                alert("Please type a message first!");
-                return;
-            }
-
-            // Save to Firebase (This syncs it for everyone globally)
+            if (msgInput.value.trim() === "") { alert("Please type a message first!"); return; }
             commentsRef.push({
                 name: nameInput.value.trim() || 'Anonymous',
                 text: msgInput.value.trim(),
                 timestamp: Date.now()
             });
-
-            // Clear inputs
             msgInput.value = "";
         }
 
         function deleteComment(id) {
-            if(confirm("Delete this comment for everyone?")) {
-                database.ref('comments/' + id).remove();
+            const password = prompt("Enter Admin Password to delete:");
+            if (password === "jennie") { 
+                database.ref('comments/' + id).remove()
+                    .then(() => alert("Comment removed."))
+                    .catch((error) => alert("Security Error: " + error.message));
+            } else {
+                alert("Access Denied!");
             }
         }
     </script>
