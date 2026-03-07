@@ -175,7 +175,7 @@ A
                     <div class="md:w-2/5 flex justify-center md:justify-end mb-10 md:mb-0">
                         <div class="relative group cursor-pointer animate-float">
                             <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-teal-400 rounded-full blur opacity-50 group-hover:opacity-100 transition duration-700 animate-pulse"></div>
-                          <img src="{{ asset('profile.png') }}" alt="Gild Photo" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-slate-900 shadow-2xl">
+                          <img src="{{ asset('profile.webp') }}" alt="Gild Photo" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-slate-900 shadow-2xl">
                         </div>
                     </div>
                 </div>
