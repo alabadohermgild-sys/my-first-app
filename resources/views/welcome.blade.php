@@ -21,7 +21,7 @@
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+A
         .feed-scrollbar::-webkit-scrollbar { width: 4px; }
         .feed-scrollbar::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
 
@@ -115,7 +115,7 @@
                 </span>
                 <span class="text-[10px] font-black uppercase tracking-[0.3em] text-blue-100">Welcome back, User</span>
             </div>
-            <h1 class="text-5xl md:text-8xl font-black mb-4 tracking-tight uppercase">Front End <span class="animate-name">Developer</span></h1>
+            <h1 class="text-5xl md:text-8xl font-black mb-4 tracking-tight case">Hi, I'm <span class="animate-name">Gild</span></h1>
             <p class="text-xl text-gray-300 max-w-2xl mb-8">A learner in tech, a servant in faith.</p>
             
             <div class="flex flex-wrap justify-center gap-4 mb-10">
@@ -157,7 +157,7 @@
                     <div class="md:w-3/5 text-center md:text-left">
                         <h3 class="text-4xl md:text-6xl font-black mb-4 tracking-tight">Hello, I'm <span class="animate-name">Hermgild</span></h3>
                         <p class="text-gray-300 leading-relaxed mb-6 text-lg">
-                            I am a BS Information Systems student at Central Philippine Adventist College. I'm a dedicated learner in the tech space, currently mastering backend development with Laravel and crafting sleek interfaces with Tailwind CSS.
+                            Guided by faith and driven by innovation, I am an Aspiring Software Developer at Central Philippine Adventist College. I believe in crafting digital experiences with a higher purpose—leveraging Laravel to build firm foundations and Tailwind CSS to reveal the beauty in every pixel. For me, code is not just logic; it is a tool to create, serve, and glorify. I view every project as an opportunity to work heartily, as for the Lord, ensuring every line of code serves a greater mission.
                         </p>
                         <div class="bg-blue-500/5 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6 text-left">
                             <p class="text-blue-400 italic font-serif text-lg divine-quote">
