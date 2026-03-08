@@ -165,21 +165,26 @@ A
                                 <span class="block mt-2 font-bold text-xs uppercase tracking-widest text-blue-500">— Proverbs 16:3</span>
                             </p>
                         </div>
-                        <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                            <div class="px-4 py-2 bg-white/5 rounded-lg border border-white/10 text-[10px] font-bold uppercase text-gray-400">Student</div>
-                            <div class="px-4 py-2 bg-white/5 rounded-lg border border-white/10 text-[10px] font-bold uppercase text-gray-400">Developer</div>
-                            <div class="px-4 py-2 bg-white/5 rounded-lg border border-white/10 text-[10px] font-bold uppercase text-gray-400">Believer</div>
-                        </div>
-                    </div>
+                        <div class="md:w-2/5 flex justify-center md:justify-end mb-10 md:mb-0">
+    <div class="relative group cursor-pointer animate-float w-64 h-64 md:w-80 md:h-80">
+        
+        <div class="absolute -inset-2 bg-gradient-to-br from-[#3B82F6] via-[#10B981] to-black rounded-full blur opacity-50 group-hover:opacity-100 transition duration-700 animate-pulse"></div>
+        
+        <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-900 shadow-2xl shadow-blue-500/20">
+            <img src="{{ asset('profile.webp') }}" 
+                 alt="Gild Photo" 
+                 loading="lazy"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 
-                    <div class="md:w-2/5 flex justify-center md:justify-end mb-10 md:mb-0">
-                        <div class="relative group cursor-pointer animate-float">
-                            <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-teal-400 rounded-full blur opacity-50 group-hover:opacity-100 transition duration-700 animate-pulse"></div>
-                          <img src="{{ asset('profile.webp') }}" alt="Gild Photo" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-slate-900 shadow-2xl">
-                        </div>
-                    </div>
-                </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end items-center pb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-white font-black text-sm tracking-tighter uppercase">Hermgild</span>
+                <span class="text-blue-400 font-mono text-[9px] uppercase tracking-[0.2em]">@hernz_dev</span>
             </div>
+        </div>
+
+        <div class="absolute inset-0 rounded-full border border-white/10 group-hover:border-blue-500/50 transition-colors pointer-events-none"></div>
+    </div>
+</div>
         </section>
 
         <div id="about-window" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
