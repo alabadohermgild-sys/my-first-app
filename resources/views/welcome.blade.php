@@ -7,6 +7,9 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         
         #about-window:target, #contact-window:target { display: flex !important; }
         
@@ -94,17 +97,33 @@ A
                     <span class="hidden md:block text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] border-l border-white/10 pl-4">
                         Dashboard / <span class="text-blue-400">Welcome</span>
                     </span>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <div id="clock-container" class="hidden lg:flex flex-col items-end bg-blue-500/5 px-4 py-1 rounded border border-blue-500/10">
-                        <span class="text-[8px] text-gray-500 uppercase tracking-widest font-black">Murcia, PH</span>
-                        <div id="clock" class="font-mono text-[11px] text-blue-400 tracking-widest">00:00:00</div>
-                    </div>
-                    <a href="#about-section" class="text-sm font-medium hover:text-blue-400 transition">About</a>
-                    <a href="#projects" class="text-sm font-medium hover:text-blue-400 transition">Work</a>
-                    <a href="#contact-window" class="bg-blue-600 px-5 py-2 rounded-full hover:bg-blue-500 transition text-sm font-bold shadow-lg shadow-blue-500/30">Contact</a>
-                </div>
-            </div>
+                <div class="flex items-center space-x-8"> <a href="#hero" class="group relative text-sm font-medium hover:text-blue-400 transition">
+        Home
+        <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+    </a>
+
+    <a href="#about-section" class="group relative text-sm font-medium hover:text-blue-400 transition">
+        About
+        <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+    </a>
+
+    <div class="flex items-center gap-2 group">
+        <a href="#projects" class="text-sm font-medium hover:text-blue-400 transition">Work</a>
+        <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+        </span>
+    </div>
+
+    <div id="clock-container" class="hidden lg:flex flex-col items-end bg-blue-500/5 px-4 py-1 rounded border border-blue-500/10">
+        <span class="text-[8px] text-gray-500 uppercase tracking-widest font-black">Murcia, PH</span>
+        <div id="clock" class="font-mono text-[11px] text-blue-400 tracking-widest">00:00:00</div>
+    </div>
+
+    <a href="#contact-window" class="bg-blue-600 px-5 py-2 rounded-full hover:bg-blue-500 transition text-sm font-bold shadow-lg shadow-blue-500/30">
+        Contact
+    </a>
+</div>
         </nav>
 
         <main class="flex flex-col items-center justify-center min-h-screen text-center px-4 relative z-10 pt-20">
@@ -115,9 +134,17 @@ A
                 </span>
                 <span class="text-[10px] font-black uppercase tracking-[0.3em] text-blue-100">Welcome back, User</span>
             </div>
-            <h1 class="text-5xl md:text-8xl font-black mb-4 tracking-tight case">Hi, I'm <span class="animate-name">Gild</span></h1>
-            <p class="text-xl text-gray-300 max-w-2xl mb-8">A learner in tech, a servant in faith.</p>
-            
+           <section id="hero" class="min-h-screen flex flex-col justify-center px-4 relative">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-5xl md:text-8xl font-black mb-4 tracking-tight case">
+            Hi, I'm <span class="animate-name">Gild</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-2xl mb-8">
+            A learner in tech, a servant in faith.
+        </p>
+        
+        </div>
+</section>
             <div class="flex flex-wrap justify-center gap-4 mb-10">
                 <div class="bg-black/40 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-md min-w-[100px] order-1">
                     <p class="text-[9px] text-gray-500 uppercase font-black tracking-tighter mb-1">SCHOOL</p>
@@ -185,7 +212,7 @@ A
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end items-center pb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <span class="text-white font-black text-sm tracking-tighter uppercase">Hermgild</span>
-                            <span class="text-blue-400 font-mono text-[9px] uppercase tracking-[0.2em]">@hernz_dev</span>
+                            <span class="text-blue-400 font-mono text-[9px] uppercase tracking-[0.2em]">@hermz_dev</span>
                         </div>
                     </div>
                     <div class="absolute inset-0 rounded-full border border-white/10 group-hover:border-blue-500/50 transition-colors pointer-events-none"></div>
