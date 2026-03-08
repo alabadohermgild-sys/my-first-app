@@ -150,42 +150,49 @@ A
         </main>
 
         <section id="about-section" class="max-w-6xl mx-auto px-4 py-20 relative z-10">
-            <div class="w-full flex flex-col bg-transparent">
-                <h2 class="text-4xl font-black mb-16 tracking-tighter uppercase text-white text-center">About <span class="text-blue-500">Me</span></h2>
+    <div class="w-full flex flex-col bg-transparent">
+        <h2 class="text-4xl font-black mb-16 tracking-tighter uppercase text-white text-center">
+            About <span class="text-blue-500">Me</span>
+        </h2>
+        
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
+            
+            <div class="md:w-3/5 text-center md:text-left">
+                <h3 class="text-4xl md:text-6xl font-black mb-4 tracking-tight">
+                    Hello, I'm <span class="animate-name">Hermgild</span>
+                </h3>
+                <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+                    Guided by faith and driven by innovation, I am an Aspiring Software Developer at Central Philippine Adventist College. I believe in crafting digital experiences with a higher purpose—leveraging Laravel to build firm foundations and Tailwind CSS to reveal the beauty in every pixel. For me, code is not just logic; it is a tool to create, serve, and glorify. I view every project as an opportunity to work heartily, as for the Lord, ensuring every line of code serves a greater mission.
+                </p>
                 
-                <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12 w-full">
-                    <div class="md:w-3/5 text-center md:text-left">
-                        <h3 class="text-4xl md:text-6xl font-black mb-4 tracking-tight">Hello, I'm <span class="animate-name">Hermgild</span></h3>
-                        <p class="text-gray-300 leading-relaxed mb-6 text-lg">
-                            Guided by faith and driven by innovation, I am an Aspiring Software Developer at Central Philippine Adventist College. I believe in crafting digital experiences with a higher purpose—leveraging Laravel to build firm foundations and Tailwind CSS to reveal the beauty in every pixel. For me, code is not just logic; it is a tool to create, serve, and glorify. I view every project as an opportunity to work heartily, as for the Lord, ensuring every line of code serves a greater mission.
-                        </p>
-                        <div class="bg-blue-500/5 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6 text-left">
-                            <p class="text-blue-400 italic font-serif text-lg divine-quote">
-                                "Commit your work to the Lord, and your plans will be established." 
-                                <span class="block mt-2 font-bold text-xs uppercase tracking-widest text-blue-500">— Proverbs 16:3</span>
-                            </p>
+                <div class="bg-blue-500/5 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6 text-left">
+                    <p class="text-blue-400 italic font-serif text-lg divine-quote">
+                        "Commit your work to the Lord, and your plans will be established." 
+                        <span class="block mt-2 font-bold text-xs uppercase tracking-widest text-blue-500">— Proverbs 16:3</span>
+                    </p>
+                </div>
+            </div> 
+
+            <div class="md:w-2/5 flex justify-center md:justify-end mb-10 md:mb-0">
+                <div class="relative group cursor-pointer animate-float w-64 h-64 md:w-80 md:h-80">
+                    <div class="absolute -inset-2 bg-gradient-to-br from-[#3B82F6] via-[#10B981] to-black rounded-full blur opacity-50 group-hover:opacity-100 transition duration-700 animate-pulse"></div>
+                    
+                    <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-900 shadow-2xl shadow-blue-500/20">
+                        <img src="{{ asset('profile.webp') }}" 
+                             alt="Gild Photo" 
+                             loading="lazy"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end items-center pb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white font-black text-sm tracking-tighter uppercase">Hermgild</span>
+                            <span class="text-blue-400 font-mono text-[9px] uppercase tracking-[0.2em]">@hernz_dev</span>
                         </div>
-                        <div class="md:w-2/5 flex justify-center md:justify-end mb-10 md:mb-0">
-    <div class="relative group cursor-pointer animate-float w-64 h-64 md:w-80 md:h-80">
-        
-        <div class="absolute -inset-2 bg-gradient-to-br from-[#3B82F6] via-[#10B981] to-black rounded-full blur opacity-50 group-hover:opacity-100 transition duration-700 animate-pulse"></div>
-        
-        <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-900 shadow-2xl shadow-blue-500/20">
-            <img src="{{ asset('profile.webp') }}" 
-                 alt="Gild Photo" 
-                 loading="lazy"
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="absolute inset-0 rounded-full border border-white/10 group-hover:border-blue-500/50 transition-colors pointer-events-none"></div>
+                </div>
+            </div> 
 
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end items-center pb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span class="text-white font-black text-sm tracking-tighter uppercase">Hermgild</span>
-                <span class="text-blue-400 font-mono text-[9px] uppercase tracking-[0.2em]">@hernz_dev</span>
-            </div>
-        </div>
-
-        <div class="absolute inset-0 rounded-full border border-white/10 group-hover:border-blue-500/50 transition-colors pointer-events-none"></div>
-    </div>
-</div>
-        </section>
+        </div> </div> </section>
 
         <div id="about-window" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
             <a href="#" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></a>
